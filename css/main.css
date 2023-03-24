@@ -619,7 +619,6 @@ aside {
   padding-bottom: 5px;
 }
 .list-with-title .listing .listing-post .post-time {
-  float: right;
   display: inline-block;
   max-width: 10%;
   text-align: right;
@@ -1084,9 +1083,9 @@ a.btn {
 }
 @media (min-width: 1921px) {
   .sidebar {
-    padding-left: 17%;
-    padding-right: 3%;
-    width: calc(var(--sidebar-width) - 20%);
+    padding-left: 6%;
+    padding-right: 6%;
+    width: 13vw;
   }
   .content {
     padding-right: 20%;
