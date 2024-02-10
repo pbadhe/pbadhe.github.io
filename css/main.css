@@ -24,6 +24,9 @@
   --content-width: calc(var(--content-ratio) * 100%);
   --sidebar-width: calc(var(--sidebar-ratio) * 100%);
   --content-ratio: 0.75;
+  --theme-toggle-text-color: #ffffff; 
+  --theme-toggle-hover-text-color: #b5b5b5; 
+  --theme-toggle-dark-text-color: #000000;
 }
 html[data-theme="dark"] {
   --bg-color: #010408;
@@ -41,7 +44,30 @@ html[data-theme="dark"] {
   --blockquote-border-color: #424242;
   --link-color: #58a6fe;
   --warning-alert-color: #4d00c9c7;
+  --theme-toggle-text-color: #000000; 
+  --theme-toggle-hover-text-color: #656464;
 }
+.theme-switch {
+  display: inline-block;
+}
+#theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--nav-text-color); 
+  font-size: 1.2rem;
+  font-family: pinghei, pingfang sc, helvetica neue, work sans, hiragino sans gb, sans-serif;
+  cursor: pointer;
+  transition: color 1s;
+}
+
+#theme-toggle:hover {
+  color: var(--theme-toggle-hover-text-color); 
+}
+
+[data-theme="dark"] #theme-toggle:hover {
+  color: var(--theme-toggle-hover-text-color); 
+}
+
 html {
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
