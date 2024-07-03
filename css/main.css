@@ -49,17 +49,14 @@ html[data-theme="dark"] {
   --theme-toggle-hover-text-color: #656464;
   --sidebar-shadow-colour: rgba(231, 227, 227, 0.1);
 }
-.theme-switch {
-  display: inline-block;
-}
 #theme-toggle {
   background-color: transparent;
   border: none;
   color: var(--nav-text-color); 
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: pinghei, pingfang sc, helvetica neue, work sans, hiragino sans gb, sans-serif;
   cursor: pointer;
-  transition: color 1s;
+  transition: color 0.3s;
 }
 
 #theme-toggle:hover {
@@ -216,7 +213,9 @@ header .nav__list a {
   color: var(--nav-text-color);
 }
 header .nav__list a:hover {
-  color: #2660ab;
+  color: var(--nav-text-color);
+  padding-bottom: 22px;
+  box-shadow:inset 0px -5px;
 }
 header .nav__list a.current {
   color: var(--nav-text-color);
@@ -457,12 +456,12 @@ aside {
 .post .post-content a {
   text-decoration: none;
   letter-spacing: 1px;
-  color: #2660ab;
+  color: #2d5ec8;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 .post .post-content a:hover {
-  color: #2f69b3;
+  color: #2d5ec8;
 }
 .post .post-content h3 {
   font-size: 2.2rem;
