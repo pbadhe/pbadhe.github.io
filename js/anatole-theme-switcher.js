@@ -11,7 +11,7 @@ function setTheme(theme) {
 function init() {
     const savedTheme = getTheme();
     if (savedTheme === null) {
-        setTheme('dark')
+        setTheme('light')
     } else {
         savedTheme === 'light' ? document.documentElement.setAttribute('data-theme', 'light') : document.documentElement.setAttribute('data-theme', 'dark');
     }

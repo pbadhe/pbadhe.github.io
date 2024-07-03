@@ -27,6 +27,7 @@
   --theme-toggle-text-color: #ffffff; 
   --theme-toggle-hover-text-color: #b5b5b5; 
   --theme-toggle-dark-text-color: #000000;
+  --sidebar-shadow-colour: rgba(22, 21, 21, 0.1);
 }
 html[data-theme="dark"] {
   --bg-color: #010408;
@@ -46,6 +47,7 @@ html[data-theme="dark"] {
   --warning-alert-color: #4d00c9c7;
   --theme-toggle-text-color: #000000; 
   --theme-toggle-hover-text-color: #656464;
+  --sidebar-shadow-colour: rgba(231, 227, 227, 0.1);
 }
 .theme-switch {
   display: inline-block;
@@ -71,7 +73,7 @@ html[data-theme="dark"] {
 html {
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
-  font-size: 62.5%;
+  font-size: 70.5%;
 }
 body {
   color: var(--body-color);
@@ -204,7 +206,7 @@ header {
 header .nav__list {
   list-style: none;
   padding: 20px 30px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 header .nav__list li {
   position: relative;
@@ -219,7 +221,8 @@ header .nav__list a:hover {
 header .nav__list a.current {
   color: var(--nav-text-color);
   padding-bottom: 22px;
-  border-bottom: 1px solid var(--nav-text-color);
+  box-shadow:inset 0px -5px;
+  /* border-bottom: 4px solid var(--nav-text-color); */
 }
 .theme-switch {
   margin-top: -5px;
@@ -234,6 +237,8 @@ header .information {
 header .information .avatar {
   float: right;
 }
+
+
 header .information .avatar img {
   width: 32px;
   height: 32px;
@@ -335,6 +340,9 @@ aside {
   z-index: 4;
   border-right: 1px solid var(--border-color);
 }
+.sidebar {
+  box-shadow: 5px 0px 10px var(--sidebar-shadow-colour);
+}
 .sidebar .logo-title {
   top: 40%;
   text-align: center;
@@ -350,7 +358,25 @@ aside {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  /* border: 2px solid #ccc;  */
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); 
+  /* box-shadow: 0px 0px 20px var(--sidebar-shadow-colour);  */
+  animation: pulse-shadow 2s infinite;
 }
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
 .sidebar .logo-title .title h3 {
   text-transform: uppercase;
   font-size: 2.2rem;
@@ -389,6 +415,11 @@ aside {
   background-color: var(--bg-color);
   margin: 30px;
 }
+
+.post-title {
+  padding-right: 20%;
+}
+
 .post .post-title h1 {
   text-transform: uppercase;
   font-size: 3em;
@@ -419,6 +450,9 @@ aside {
 }
 .post .post-title a:hover {
   text-decoration: underline;
+}
+#word{
+  font-size: x-large;
 }
 .post .post-content a {
   text-decoration: none;
